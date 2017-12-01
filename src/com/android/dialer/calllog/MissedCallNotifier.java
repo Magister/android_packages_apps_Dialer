@@ -138,6 +138,7 @@ public class MissedCallNotifier {
                 .setContentIntent(createCallLogPendingIntent())
                 .setAutoCancel(true)
                 .setWhen(timeMs)
+                .setPriority(Notification.PRIORITY_MAX)
                 .setDeleteIntent(createClearMissedCallsPendingIntent());
 
         // Create the notification suitable for display when sensitive information is showing.
@@ -148,6 +149,7 @@ public class MissedCallNotifier {
                 .setContentIntent(createCallLogPendingIntent())
                 .setAutoCancel(true)
                 .setWhen(timeMs)
+                .setPriority(Notification.PRIORITY_MAX)
                 .setDeleteIntent(createClearMissedCallsPendingIntent())
                 // Include a public version of the notification to be shown when the missed call
                 // notification is shown on the user's lock screen and they have chosen to hide
